@@ -1,12 +1,12 @@
 import React from 'react';
 import PostsGrid from './PostsGrid';
-import { getAllPosts } from '@/service/post';
+import { getFeaturedPosts } from '@/service/post';
 
 export default async function FeaturedPost() {
-    const posts = await getAllPosts();
+    const posts = await getFeaturedPosts();
     return (
-        <section>
-            <h2>Featured Posts</h2>
+        <section className='my-4'>
+            <h2 className='text-2xl font-bold my-2'>Featured Posts</h2>
             <PostsGrid posts={posts}/>
         </section>
     );
